@@ -62,6 +62,7 @@ border-radius:5px;
 color: white;
 font-weight:bold;
 cursor: pointer;
+
 &:hover{
     background-color:#0483ee;
 }

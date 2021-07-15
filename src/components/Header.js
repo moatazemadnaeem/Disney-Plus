@@ -121,8 +121,6 @@ function Header() {
     )
 }
 const Nav =styled.nav`
-position: sticky;
-top:0px;
 background-color:#090b13;
 width: 100%;
 padding: 10px 0;
@@ -147,6 +145,7 @@ button{
     border:1px solid black;
     cursor: pointer;
     color:black;
+    z-index:1;
     &:hover{
         background-color: black;
         border:1px solid white;
