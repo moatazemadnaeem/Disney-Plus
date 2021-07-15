@@ -6,17 +6,22 @@ import PeopleIcon from '@material-ui/icons/People';
 import {useParams} from 'react-router-dom'
 import {API_URL} from '../ApiMovies'
 import axios from 'axios'
+import {useHistory} from 'react-router-dom'
 function Details() {
-    const [movie,set_movie]=useState(null)
+    const [movie,setmovie]=useState(null)
+    let history=useHistory()
+    window.onload=()=>{
+    history.push('/')
+    }
     useEffect(()=>{
         const fetchData=async()=>{
              const dataRes=await axios.get(API_URL)
-             set_movie(dataRes.data.results)
+             setmovie(dataRes.data.results)
          }
          fetchData()
      },[])
     let ActualData=null  
-    console.log('movie',movie)
+   
 
     const {id}=useParams()
     console.log('id',id)
